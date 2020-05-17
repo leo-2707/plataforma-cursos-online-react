@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import { NavLink } from 'react-router-dom';
+
+const menu = createRef();
+const toggleMenu = () => menu.current.classList.toggle('show');
 
 const Header = () => {
   return (
@@ -11,7 +14,7 @@ const Header = () => {
           </NavLink>
         </div>
         <div className='s-cols-1 lg-cols-3 s-cross-center s-main-end'>
-          <nav className='main-menu'>
+          <nav className='main-menu' ref={menu}>
             <ul>
               <li>
                 <NavLink exact to='/'>
@@ -29,6 +32,7 @@ const Header = () => {
               </li>
             </ul>
           </nav>
+          <div className="main-menu-toggle to-lg" onClick={() => toggleMenu()}></div>
         </div>
       </div>
     </header>
