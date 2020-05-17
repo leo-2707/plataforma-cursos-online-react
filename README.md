@@ -12,7 +12,7 @@ npm i redux react-redux redux-thunk redux-devtools-extension
 
 ### Other dependencies
 
-npm i axios react-router-dom
+npm i axios react-router-dom node-sass
 
 # ------------------------------
 
