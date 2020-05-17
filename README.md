@@ -1,5 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Install Dependencies
+
+### EDTeam dependencies
+
+npm i ed-grid edteam-style-guides
+
+### Redux dependencies
+
+npm i redux react-redux redux-thunk redux-devtools-extension
+
+### Other dependencies
+
+npm i axios react-router-dom
+
+# ------------------------------
+
 ## Available Scripts
 
 In the project directory, you can run:
