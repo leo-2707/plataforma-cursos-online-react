@@ -7,6 +7,7 @@ import Protected from './routes/Protected';
 
 // Pages
 import Home from './pages/Home';
+import Header from './organisms/Header';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Specialities from './pages/Specialities';
@@ -20,6 +21,7 @@ import Page404 from './pages/Page404';
 const App = () => {
   return (
     <Router>
+      <Header />
       <Switch>
         <Public path='/login' component={Login} />
         <Public path='/register' component={Register} />
