@@ -22,6 +22,7 @@ const App = () => {
   return (
     <Router>
       <Header />
+      <div className="l-block"></div>
       <Switch>
         <Public path='/login' component={Login} />
         <Public path='/register' component={Register} />

@@ -3,6 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 const menu = createRef();
 const toggleMenu = () => menu.current.classList.toggle('show');
+const logout = () => {
+  localStorage.removeItem('token');
+  window.location = '/login';
+};
 
 const Header = () => {
   return (
@@ -30,9 +34,12 @@ const Header = () => {
               <li>
                 <NavLink to='/teachers'>Teachers</NavLink>
               </li>
+              <li>
+                <span onClick={() => logout()}>Logout</span>
+              </li>
             </ul>
           </nav>
-          <div className="main-menu-toggle to-lg" onClick={() => toggleMenu()}></div>
+          <div className='main-menu-toggle to-lg' onClick={() => toggleMenu()}></div>
         </div>
       </div>
     </header>
