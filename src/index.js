@@ -6,9 +6,6 @@ import "./styles/styles.scss"
 // Redux
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import { getAllSpecialities } from './redux/actionCreators';
-
-store.dispatch(getAllSpecialities());
 
 ReactDOM.render(
   <React.StrictMode>

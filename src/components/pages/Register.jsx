@@ -24,6 +24,7 @@ const register = (event) => {
 const Register = () => {
   return (
     <div className='ed-grid'>
+      <div className='l-block'></div>
       <div className='m-to-center m-60 lg-30'>
         <form onSubmit={register.bind()}>
           <h1 className='center'>Register</h1>

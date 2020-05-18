@@ -24,6 +24,7 @@ const login = (event) => {
 const Login = () => {
   return (
     <div className='ed-grid'>
+      <div className='l-block'></div>
       <div className='m-to-center m-60 lg-30'>
         <form onSubmit={login.bind()}>
           <h1 className='center'>Login</h1>
@@ -48,7 +49,9 @@ const Login = () => {
         </form>
 
         <div className='center'>
-          <p>Don't have an account? <Link to="/register">Create account</Link></p>
+          <p>
+            Don't have an account? <Link to='/register'>Create account</Link>
+          </p>
         </div>
       </div>
     </div>

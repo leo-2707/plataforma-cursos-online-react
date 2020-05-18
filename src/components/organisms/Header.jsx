@@ -1,12 +1,11 @@
 import React, { createRef } from 'react';
 import { NavLink } from 'react-router-dom';
+import PublicMenu from '../molecules/PublicMenu';
+import PrivateMenu from '../molecules/PrivateMenu';
 
 const menu = createRef();
 const toggleMenu = () => menu.current.classList.toggle('show');
-const logout = () => {
-  localStorage.removeItem('token');
-  window.location = '/login';
-};
+
 
 const Header = () => {
   return (
@@ -19,25 +18,7 @@ const Header = () => {
         </div>
         <div className='s-cols-1 lg-cols-3 s-cross-center s-main-end'>
           <nav className='main-menu' ref={menu}>
-            <ul>
-              <li>
-                <NavLink exact to='/'>
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to='/specialities'>Specialities</NavLink>
-              </li>
-              <li>
-                <NavLink to='/courses'>Courses</NavLink>
-              </li>
-              <li>
-                <NavLink to='/teachers'>Teachers</NavLink>
-              </li>
-              <li>
-                <span onClick={() => logout()}>Logout</span>
-              </li>
-            </ul>
+            {localStorage.getItem('token') ? <PrivateMenu /> : <PublicMenu />}
           </nav>
           <div className='main-menu-toggle to-lg' onClick={() => toggleMenu()}></div>
         </div>
